@@ -57,7 +57,7 @@ def save_rds_instance_monitoring(rds_instance, metric):
     if result.get('instanceId', None):  del result['instanceId']
     if result.get('SampleCount', None): del result['SampleCount']
     result = dict([(x[0],float(x[1])) for x in result.items()])
-    influxdb = InfluxDBClient('192.168.70.132', 8086, 'easemob', 'thepushbox', 'monitor')
+    influxdb = InfluxDBClient('192.168.70.132', 8086, 'xx', 'xx', 'monitor')
     metric_list = ['CpuUsage', 'DiskUsage', 'IOPSUsage', 'ConnectionUsage', 'MemoryUsage', 'MySQL_NetworkInNew', 'MySQL_NetworkOutNew']
     if   metric == 'DiskUsage':
         result['max_value'] = rds_instance['DBInstanceStorage']
