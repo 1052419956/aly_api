@@ -116,6 +116,3 @@ if __name__ == '__main__':
     else:
         print '>> oldname or newname error'; sys.exit(1)
 
-
-
-
